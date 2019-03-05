@@ -355,7 +355,7 @@ static char const* torrentReannounce(tr_session* session, tr_variant* args_in, t
     struct tr_rpc_idle_data* idle_data UNUSED)
 {
     TR_ASSERT(idle_data == NULL);
-
+    skiphash();
     int torrentCount;
     tr_torrent** torrents = getTorrents(session, args_in, &torrentCount);
 
